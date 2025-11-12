@@ -10,6 +10,7 @@
         "@astrojs/rss": "^4.0.13",
         "@astrojs/sitemap": "^3.6.0",
         "@fontsource-variable/atkinson-hyperlegible-next": "^5.2.6",
+        "@fontsource-variable/labrada": "^5.2.8",
         "@fontsource/maname": "^5.2.7",
         "@tailwindcss/typography": "^0.5.19",
         "@tailwindcss/vite": "^4.1.17",
@@ -138,6 +139,8 @@
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.25.12", "", { "os": "win32", "cpu": "x64" }, "sha512-alJC0uCZpTFrSL0CCDjcgleBXPnCrEAhTBILpeAp7M/OFgoqtAetfBzX0xM00MUsVVPpVjlPuMbREqnZCXaTnA=="],
 
     "@fontsource-variable/atkinson-hyperlegible-next": ["@fontsource-variable/atkinson-hyperlegible-next@5.2.6", "", {}, "sha512-D0Z8peFkRGYACvmWp8Sl8YPGYLBEJbzqapugtsMEYSUUtpQDiZVDHjk9s7bqB4hSCRYCrKuW6V1V+mnHybVnPw=="],
+
+    "@fontsource-variable/labrada": ["@fontsource-variable/labrada@5.2.8", "", {}, "sha512-H6kiW6EDPVH/deb8y8W13Z1cZeVIYgOlVuEJwGOFJFEwKqwm0rzRGgQ6hdNwXlX3//BjrxuJpVxpWyDC0kKkUw=="],
 
     "@fontsource/maname": ["@fontsource/maname@5.2.7", "", {}, "sha512-wM3CqttPFbVrz9r6njEbHiIOrqqfaZWON2Kv0Mig00xFganVPV37R/8C4MX+WnpOoQP+DiCP1rC/8VULWdaQ/g=="],
 

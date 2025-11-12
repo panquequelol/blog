@@ -1,13 +1,13 @@
 @import "tailwindcss";
-@import '@fontsource-variable/atkinson-hyperlegible-next';
-@import '@fontsource-variable/atkinson-hyperlegible-next/wght-italic.css';
+@import '@fontsource-variable/labrada';
+@import '@fontsource-variable/labrada/wght-italic.css';
 
 @theme {
   --color-foreground-100: #0E1511;
   --color-foreground-200: #1B2A1E;
-  --color-primary-100: #53B365;
+  --color-primary-100: #71D083;
   --color-primary-200: #3E7949;
-  --font-sans: "Atkinson Hyperlegible Next Variable", sans-serif;
+  --font-sans: "Labrada Variable", sans-serif;
 }
 
 .prose blockquote {
