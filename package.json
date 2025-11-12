@@ -10,9 +10,21 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.10",
+    "@astrojs/prism": "^3.3.0",
+    "@astrojs/react": "^4.4.2",
     "@astrojs/rss": "^4.0.13",
     "@astrojs/sitemap": "^3.6.0",
+    "@fontsource-variable/atkinson-hyperlegible-next": "^5.2.6",
+    "@fontsource/maname": "^5.2.7",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.1.17",
+    "@types/react": "^19.2.3",
+    "@types/react-dom": "^19.2.2",
     "astro": "^5.15.5",
-    "sharp": "^0.34.3"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "remark-breaks": "^4.0.0",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.17"
   }
 }
