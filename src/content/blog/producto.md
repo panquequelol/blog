@@ -13,3 +13,9 @@ las peores llegaron como practicantes de product manager
 encargarte del producto requiere tener gusto e intuición desarrollada para saber en qué dirección llevar las cosas
 
 por eso, un practicante de producto no existe
+
+---
+
+nota 1: una persona que no sabe crear un producto, no debería dirigir hacia dónde se lleva, eso quiere decir este blog. hay quienes tomaron lo que escribí de forma superficial
+
+nota 2: todo el mundo está demasiado ocupado pensando en sí mismo para pensar en ti. nada es personal. no hay persona más asquerosa que la que usa frecuentemente la palabra "resentido"

@@ -17,11 +17,10 @@ const { title, description } = Astro.props;
     {description && <meta name="description" content={description} />}
   </head>
   <body
-    class="min-h-screen bg-foreground-100 text-primary-100 p-4 antialiased text-xl"
+    class="min-h-screen bg-foreground-100 text-primary-100 p-4 antialiased text-2xl"
   >
     <main class="max-w-xl mx-auto">
       <slot />
     </main>
   </body>
 </html>
-
