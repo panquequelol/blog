@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import '@fontsource-variable/labrada';
+@import '@fontsource-variable/labrada/wght.css';
 @import '@fontsource-variable/labrada/wght-italic.css';
 
 @theme {
@@ -9,6 +9,10 @@
   --color-typography-100: #ECEEEC;
   --color-typography-200: #767D74;
   --font-sans: "Labrada Variable", sans-serif;
+}
+
+html, body {
+  overscroll-behavior: none;
 }
 
 body {

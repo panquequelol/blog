@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -11,6 +12,28 @@ const { title, description } = Astro.props;
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
 );
+
+const IMAGES = [
+  "/puter.webp",
+  "/puter2.webp",
+  "/puter3.webp",
+  "/puter4.webp",
+  "/puter5.webp",
+];
+
+const WHO_IMAGE = "/who.webp";
+
+function hashString(str: string): number {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = ((hash << 5) - hash + str.charCodeAt(i)) | 0;
+  }
+  return Math.abs(hash);
+}
+
+const currentPath = Astro.url.pathname;
+const selectedImage =
+  currentPath === "/" ? WHO_IMAGE : IMAGES[hashString(title) % IMAGES.length];
 ---
 
 <!doctype html>
@@ -19,51 +42,61 @@ const posts = (await getCollection("blog")).sort(
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{currentPath === "/" ? "reno" : title}</title>
     {description && <meta name="description" content={description} />}
+    <ViewTransitions />
   </head>
   <body
-    class="min-h-screen bg-linear-to-br from-foreground-100 to-foreground-300 text-typography-100 p-8 antialiased text-xl bg-foreground-100"
+    class="min-h-screen bg-linear-to-br from-foreground-100 to-foreground-300 text-typography-100 antialiased text-xl bg-foreground-100"
   >
-    <div
-      class="flex flex-col md:flex-row gap-8 md:gap-32 justify-between max-w-5xl"
-    >
+    <div class="flex flex-col md:flex-row max-w-5xl">
       <aside
-        class="order-2 md:order-1 md:sticky md:max-w-sm md:top-8 h-fit shrink-0"
+        class="order-2 md:order-1 md:fixed md:h-screen md:max-w-sm shrink-0 flex flex-col justify-between p-8 md:gap-8"
       >
-        <h1>reno</h1>
-        <p class="text-balance text-typography-200">
-          colección de notas para mi familia y amigos. eres un invitado,
-          comparte como tal.
-        </p>
-        <section class="py-4">
-          <h2>colección</h2>
-          {
-            posts.map((post) => {
-              const date =
-                post.data.pubDate.toLocaleDateString("es-ES", {
-                  month: "numeric",
-                }) +
-                ", " +
-                post.data.pubDate.getFullYear();
-              return (
-                <article class="ml-8">
-                  <a
-                    href={`/${post.id}`}
-                    class="block group hover:text-primary"
-                  >
-                    <h1>
-                      {post.data.title}.
-                      <time class="text-typography-200">{date}</time>
-                    </h1>
-                  </a>
-                </article>
-              );
-            })
-          }
-        </section>
+        <div class="flex-1 overflow-y-auto">
+          <h1><a class="hover:text-primary" href="/">reno</a></h1>
+          <p class="text-balance text-typography-200">
+            colección de notas para mi familia y amigos. eres un invitado,
+            comparte como tal.
+          </p>
+          <section class="py-4">
+            <h2>colección</h2>
+            {
+              posts.map((post) => {
+                const date =
+                  post.data.pubDate.toLocaleDateString("es-ES", {
+                    month: "numeric",
+                  }) +
+                  ", " +
+                  post.data.pubDate.getFullYear();
+                return (
+                  <article class="ml-8">
+                    <a
+                      href={`/${post.id}`}
+                      class="block group hover:text-primary"
+                    >
+                      <h1>
+                        {post.data.title}.
+                        <time class="text-typography-200">{date}</time>
+                      </h1>
+                    </a>
+                  </article>
+                );
+              })
+            }
+          </section>
+        </div>
+        <div class="shrink-0 pt-8">
+          <img
+            src={selectedImage}
+            alt="silly image"
+            class="w-full opacity-80"
+          />
+        </div>
       </aside>
-      <main class="order-1 md:order-2 flex-1 md:max-w-lg">
+      <main
+        class="order-1 md:order-2 flex-1 md:max-w-lg md:ml-[calc(24rem+8rem)] p-8"
+      >
         <slot />
       </main>
     </div>

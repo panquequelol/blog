@@ -1,14 +1,35 @@
 ---
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
-import { getCollection } from "astro:content";
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+function myAge(): number {
+  const birth = new Date("2001-07-10" + "T00:00:00-03:00");
+  const now = new Date(
+    new Date().toLocaleString("en-US", { timeZone: "America/Santiago" })
+  );
+
+  let age = now.getFullYear() - birth.getFullYear();
+  const monthDiff = now.getMonth() - birth.getMonth();
+
+  if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < birth.getDate())) {
+    age--;
+  }
+
+  return age;
+}
+
+const meContent = Object.values(
+  import.meta.glob("../content/me.md", { eager: true })
 );
+const { Content } = meContent[0];
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <div></div>
+  <article class="prose prose-lg text-balance space-y-8 mb-8">
+    <h1>
+      {myAge()} años
+    </h1>
+    <p><Content /></p>
+  </article>
 </BaseLayout>
