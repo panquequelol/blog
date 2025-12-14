@@ -10,36 +10,5 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <h1>reno c.</h1>
-  <p class="text-balance text-primary-200">
-    colección de notas e ideas. <br /> nada es original. <br /> no es la verdad.
-    <br />
-    lee más que yo
-  </p>
-  <section class="space-y-4 py-4">
-    <h2>colección</h2>
-    {
-      posts.map((post) => (
-        <article>
-          <a
-            href={`/${post.id}`}
-            class="block p-4 hover:bg-primary-200 group bg-foreground-200"
-          >
-            <h3>
-              {post.data.title}
-              <span class="text-primary-200 group-hover:text-primary-100">
-                {post.data.pubDate.toLocaleDateString("es-ES", {
-                  month: "numeric",
-                  year: "numeric",
-                })}
-              </span>
-            </h3>
-            <p class="text-primary-200 text-pretty group-hover:text-primary-100">
-              {post.data.description}
-            </p>
-          </a>
-        </article>
-      ))
-    }
-  </section>
+  <div></div>
 </BaseLayout>

@@ -4,16 +4,21 @@
 
 @theme {
   --color-foreground-100: #0E1511;
-  --color-foreground-200: #1B2A1E;
-  --color-primary-100: #71D083;
-  --color-primary-200: #3E7949;
+  --color-foreground-300: #0F2E22;
+  --color-primary: #29A383;
+  --color-typography-100: #ECEEEC;
+  --color-typography-200: #767D74;
   --font-sans: "Labrada Variable", sans-serif;
 }
 
+body {
+  background-attachment: fixed;
+}
+
 .prose blockquote {
-  border-left: 4px solid var(--color-primary-100);
+  border-left: 4px solid var(--color-typography-100);
   padding-left: 1rem;
   margin: 1.5rem 0;
-  color: var(--color-primary-100);
+  color: var(--color-typography-100);
   font-style: italic;
 }

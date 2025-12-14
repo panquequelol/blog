@@ -6,6 +6,8 @@ pubDate: "10 Nov 2025"
 
 > este fue un mensaje que le envié a alguien por linkedin. ideas de otros, sueltas, en un mensaje largo
 
+> tengo que editar esta entrada algun dia
+
 no soy un gurú, solo puedo decir qué ideas tengo
 
 entiendo que quieres dejar de ser empleado

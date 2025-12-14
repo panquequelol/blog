@@ -16,7 +16,7 @@ el dinero no es insignificante. el dinero puede que para ti no tenga sentido aho
 
 escuché de muchas personas después de un par de años en tecnología "vuélvete devops, ahí está el dinero", pero, puedes crear algo que cambie el mundo solo siendo infraestructura?
 
-la infra sirve para sostener algo importante, yo quiero crear eso, lo que viene antes
+la infra sirve para sostener algo importante, yo quiero crear eso
 
 te recomiendo intentar crear cosas bellas, la única forma que he encontrado de darle sentido a todo
 

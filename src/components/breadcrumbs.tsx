@@ -15,7 +15,7 @@ export function Breadcrumbs({ paths }: Props) {
             <span className="p-1 lowercase">{path.label}</span>
           ) : (
             <a
-              className="bg-foreground-200 text-center p-1 lowercase hover:bg-primary-200 inline-block"
+              className="bg-foreground-300 text-center p-1 lowercase hover:bg-foreground-100 inline-block"
               href={path.href}
             >
               {path.label}

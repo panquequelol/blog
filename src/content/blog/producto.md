@@ -1,6 +1,6 @@
 ---
 title: "producto"
-description: "para saber qué camino tomar, tienes que caminar primero"
+description: "para saber a dónde ir, primero camina"
 pubDate: "12 Nov 2025"
 ---
 
