@@ -10,7 +10,7 @@ autista y obsesivo
 
 sé crear páginas web
 
-quiero ser [polímata](https://es.wikipedia.org/wiki/Polimat%C3%ADa)
+no encuentro sentido en especializarme. quiero ser [polímata](https://es.wikipedia.org/wiki/Polimat%C3%ADa)
 
 proyectos actuales
 
